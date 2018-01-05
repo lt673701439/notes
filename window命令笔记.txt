@@ -1,0 +1,11 @@
+查看端口列表
+netstat -ano
+
+查看某个端口的pid
+netstat -ano|findstr "端口号"
+
+查看pid对应的具体程序
+tasklist|findstr "端口号"
+
+杀掉进程
+taskkill /f /t /im 进程名称

@@ -1,0 +1,5 @@
+查看所有服务端口
+netstat -ap
+
+查看某个端口
+netstat -ap | grep 端口号

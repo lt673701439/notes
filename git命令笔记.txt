@@ -1,0 +1,30 @@
+克隆
+git clone 远程库
+ 
+切换分支
+git checkout DEV6 远程库
+
+查看所有分支
+git branch -a 远程库
+
+克隆分支
+git clone -b dev 远程库
+
+上传到git远程库
+git clone 远程库
+git add .
+git commit -m "message"
+git push -u origin master 
+
+克隆某个文件夹，此操作修改了git的配置，只能下载设定检出的文件夹，之后无法下载其它文件
+1.本地新建空git档：
+git init 保存的文件夹
+2.启用sparse-checkout：
+git config core.spareCheckout true
+3.设定检出哪些文件:
+echo '/文件夹1/*' >> .git/info/sparse-checkout
+echo '/文件夹2/*' .....
+4.设定remote源：
+git remote add origin 远程库
+5.pull到本地：
+git pull origin master
